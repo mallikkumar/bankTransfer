@@ -58,7 +58,7 @@ public class BankTransferServiceImpl implements BankTransferService {
 	 */
 	@Override
 	public Account findByAccountNumber(String accountNumber) {
-		return accountRepository.findByAccountNumberEquals(accountNumber);
+		return getValidatedAccount(accountNumber);
 	}
 
 	/**
